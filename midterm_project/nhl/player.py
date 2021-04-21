@@ -29,6 +29,18 @@ def get_players(season):
     Arguments:
         season - The season player statistics are requested. Character. Example: "20192020"
                  for the 2019/2020 season
+    Returns:
+        This function will scrape player statistics for each player for each team
+        for the specified season. Players must have played at least 1 regular 
+        season game to be included. Goalies are excluded as they have significantly 
+        different stats. I believe players may be recorded on multiple teams due to 
+        trades. That will have to be handled post-hoc. Currently, the function takes
+        a few minutes to gather all of the data for a particular season.
+    Example: 
+        import pandas as pd
+        import requests
+        
+        pd.DataFrame("20192020")
     """
     # setting the base API url for use throughout
     base_api = "https://statsapi.web.nhl.com"
@@ -61,6 +73,7 @@ def get_players(season):
                 # collecting player position and team
                 player_dict['position'] = roster['roster'][player]['position']['code']
                 player_dict['team'] = teams['teams'][team]['name']
+                player_dict['team_id'] = teams['teams'][team]['id']
                 
                 # getting the player 'characteristics' so to speak
                 player_char_json = requests.get(base_api + player_link).json()
