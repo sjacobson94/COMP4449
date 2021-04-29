@@ -3,25 +3,6 @@ import functools
 import requests
 # doing it the old fashion way
 
-# def get_player(year):
-#     # create the link based on year
-#     link = f"https://www.hockey-reference.com/leagues/NHL_%s_skaters.html#stats" % year
-#     # use pandas to read in the table
-#     data = pd.read_html(link)[0]
-#     # rename the columns to be more usable/readable
-#     data.columns = [
-#         "rank", "player", "age", "team", "position", "games_played", "goals",
-#         "assists", "points", "plus_minus", "penalties_in_minutes", "point_shares",
-#         "even_strength_goals", "powerplay_goals", "shorthanded_goals", "game_winning_goals",
-#         "even_strength_assists", "powerplay_assists", "shorthanded_assists", "shots",
-#         "shooting_pct", "time_on_ice_min", "average_time_on_ice", "blocks", 
-#         "hits", "faceoff_wins", "faceoff_losses", "faceoff_win_pct"
-#     ]
-#     # adding a column indicating the season
-#     last_year = year-1
-#     data["season"] = f'%s/%s' % (last_year, year)
-#     return(data)
-
 
 # function to pull player data/statistics. Collected from the NHL statsapi
 def get_players(season):
@@ -40,7 +21,7 @@ def get_players(season):
         import pandas as pd
         import requests
         
-        pd.DataFrame("20192020")
+        pd.DataFrame(get_players("20192020"))
     """
     # setting the base API url for use throughout
     base_api = "https://statsapi.web.nhl.com"
