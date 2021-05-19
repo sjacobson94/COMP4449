@@ -6,7 +6,7 @@ underway and was this left out.
 
 ## Data
 
-The data used in the project was player statistics scraped from the NHLs [statsapi](https://gitlab.com/dword4/nhlapi/blob/master/stats-api.md) 
+The data used in the project was player statistics scraped from the NHLs [statsapi](https://gitlab.com/dword4/nhlapi) 
 while the salary data was scraped from a third party [website](https://www.spotrac.com/nhl/). The script that scrapes 
 these data can be found in [/nhl/player.py](https://github.com/sjacobson94/COMP4449/blob/master/midterm_project/nhl/player.py).
 
