@@ -69,6 +69,8 @@ def get_season_game_results(season):
     # setting the base API url for use throughout
     if int(season) == 2012:
         game_range = list(range(1, 721))
+    elif int(season) == 2019:
+        game_range = list(range(1, 1083))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -117,6 +119,8 @@ def get_game_officials(season):
     # setting the base API url for use throughout
     if int(season) == 2012:
         game_range = list(range(1, 721))
+    elif int(season) == 2019:
+        game_range = list(range(1, 1083))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -157,6 +161,8 @@ def get_team_stats_season(season):
     # setting the base API url for use throughout
     if int(season) == 2012:
         game_range = list(range(1, 721))
+    elif int(season) == 2019:
+        game_range = list(range(1, 1083))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -280,6 +286,8 @@ def get_player_stats_season(season):
     # setting the base API url for use throughout
     if int(season) == 2012:
         game_range = list(range(1, 721))
+    elif int(season) == 2019:
+        game_range = list(range(1, 1083))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -370,6 +378,8 @@ def get_goalie_stats_season(season):
     # setting the base API url for use throughout
     if int(season) == 2012:
         game_range = list(range(1, 721))
+    elif int(season) == 2019:
+        game_range = list(range(1, 1083))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
