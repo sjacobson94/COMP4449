@@ -71,6 +71,8 @@ def get_season_game_results(season):
         game_range = list(range(1, 721))
     elif int(season) == 2019:
         game_range = list(range(1, 1083))
+    elif int(season) == 2020:
+        game_range = list(range(1, 869))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -121,6 +123,8 @@ def get_game_officials(season):
         game_range = list(range(1, 721))
     elif int(season) == 2019:
         game_range = list(range(1, 1083))
+    elif int(season) == 2020:
+        game_range = list(range(1, 869))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -163,6 +167,8 @@ def get_team_stats_season(season):
         game_range = list(range(1, 721))
     elif int(season) == 2019:
         game_range = list(range(1, 1083))
+    elif int(season) == 2020:
+        game_range = list(range(1, 869))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -288,6 +294,8 @@ def get_player_stats_season(season):
         game_range = list(range(1, 721))
     elif int(season) == 2019:
         game_range = list(range(1, 1083))
+    elif int(season) == 2020:
+        game_range = list(range(1, 869))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
@@ -380,6 +388,8 @@ def get_goalie_stats_season(season):
         game_range = list(range(1, 721))
     elif int(season) == 2019:
         game_range = list(range(1, 1083))
+    elif int(season) == 2020:
+        game_range = list(range(1, 869))
     elif int(season) >= 2017:
         game_range = list(range(1, 1272))
     else:
