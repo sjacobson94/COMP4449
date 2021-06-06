@@ -1,3 +1,5 @@
+from sklearn.model_selection import GridSearchCV
+import time
 
 # updated function to be flexible with regression and classification as well as other scoring functions
 # and to include the option for one of the voting models from sklearn
@@ -113,7 +115,7 @@ def best_model(X_train, y_train, X_test, y_test, models, params, scoring_functio
 # more specific function designed to loop through the season in the data
 # to fit models for each. Used in a {key:function(year) for year in range()}
 # call
-def fit_optimize_season_model(data, year, models, transformer, params):
+def fit_optimize_season_model(data, year, models, transformer, params, accuracy_score, ensemble_model):
     season = str(year)+'/'+str(year+1)
     print(f"Fitting models for the %s season\n" % season)
     # data split specified season
@@ -135,7 +137,7 @@ def fit_optimize_season_model(data, year, models, transformer, params):
         params = params,
         scoring_function = accuracy_score,
         cv_scoring_metric = "accuracy",
-        ensemble_model = VotingClassifier,
+        ensemble_model = ensemble_model,
         folds = 5
     )
     
